@@ -4,7 +4,7 @@ Legacy code used by comp3d NERDD modules.
 
 ## Installation
 
-```pip install git+https://github.com/molinfo-vienna/acm-hamburg-legacy.git```
+```pip install -U acm-hamburg-legacy```
 
 ## Contributors
 

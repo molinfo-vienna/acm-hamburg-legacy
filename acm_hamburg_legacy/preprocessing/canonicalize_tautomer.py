@@ -28,12 +28,10 @@ class CanonicalizeTautomer(Step):
         errors = []
 
         # generating a canonical tautomer might ignore stereochemistry
-        taut_params = rdMolStandardize.CleanupParameters()
+        canon = rdMolStandardize.GetV1TautomerEnumerator()
         if not self.remove_stereo:
-            taut_params.tautomerRemoveSp3Stereo = False
-            taut_params.tautomerRemoveBondStereo = False
-            taut_params.tautomerRemoveIsotopicHs = False
-        canon = rdMolStandardize.TautomerEnumerator(taut_params)
+            canon.SetRemoveBondStereo(False)
+            canon.SetRemoveSp3Stereo(False)
 
         SanitizeMol(mol)
         try:
