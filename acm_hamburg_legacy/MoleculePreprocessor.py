@@ -8,7 +8,7 @@ import sys
 from rdkit import Chem
 from rdkit.Chem.Descriptors import MolWt
 from rdkit.Chem import AllChem
-from cheminformatics.rule_sets.neutralization_reactions import neutralization_reactions
+from .rule_sets.neutralization_reactions import neutralization_reactions
 import rdkit.Chem.MolStandardize.rdMolStandardize as rdMolStandardize
 
 
