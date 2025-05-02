@@ -1,6 +1,6 @@
 import chembl_structure_pipeline
 from rdkit import RDLogger
-from cheminformatics.MoleculePreprocessor import MoleculePreprocessor
+from .MoleculePreprocessor import MoleculePreprocessor
 
 
 class MoleculePreprocessorExtended(MoleculePreprocessor):
