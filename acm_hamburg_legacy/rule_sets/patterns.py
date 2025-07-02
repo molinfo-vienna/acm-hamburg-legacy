@@ -1,5 +1,10 @@
-from pkg_resources import resource_stream
 from rdkit import Chem
+
+from importlib.resources import files
+
+def resource_stream(package, resource): # replacing pkg_resources.resource_stream
+    return (files(package) / resource).open('rb')
+
 
 rule_set_files = [
     "bms",
